@@ -63,19 +63,20 @@ function Home() {
               <h3 class="text-center title mb-3">About Me</h3>
             </div>
             <div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
-                ipsum </p>
+              <p>I am a creative and motivated Web Developer with experience in creating Web Applications.
+                Strong Collaboration Skills and Proven history of Application Development.
+              </p>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 about-wthree-images">
-              <img src="web/images/ab1.jpg" alt="news image" class="img-fluid" />
+              <img src="web/images/ab1.jpg" alt="news image1" class="img-fluid" />
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 about-wthree-images">
-              <img src="web/images/ab2.jpg" alt="news image" class="img-fluid" />
+              <img src="web/images/ab2.jpg" alt="news image2" class="img-fluid" />
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 about-wthree-images">
-              <img src="web/images/ab3.jpg" alt="news image" class="img-fluid" />
+              <img src="web/images/ab3.jpg" alt="news image3" class="img-fluid" />
             </div>
           </div>
           <div class="about-history my-lg-5 my-md-4 my-3">
@@ -84,7 +85,7 @@ function Home() {
               ut labore et consectetur adipiscing sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet Lorem ipsum
               dolor sit amet, eiusmod tempor incididunt ut labore et consectetur adipiscing</p>
           </div>
-          <div class="row text-center">
+          <div class="row text-center" style={{display:"flex", justifyContent:"center"}}>
 
             <div class="col-lg-3 col-md-3 col-sm-3 col-6 count-num-txt">
               <div class="number-w3three-info">
@@ -299,7 +300,7 @@ function Home() {
         </div>
       </section>
    
-      <section class="blog py-lg-4 py-md-3 py-sm-3 py-3" id="blog">
+      {/* <section class="blog py-lg-4 py-md-3 py-sm-3 py-3" id="blog">
         <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
           <div class="position-title position-relative">
             <h6 class="text-center top-title mb-2">My Blog</h6>
@@ -356,7 +357,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     
       <section class="contact py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
         <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
