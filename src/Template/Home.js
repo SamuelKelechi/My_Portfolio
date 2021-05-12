@@ -1,4 +1,5 @@
 import React from 'react'
+import SkillSets from './SkillSets'
 
 function Home() {
     return (
@@ -63,8 +64,11 @@ function Home() {
               <h3 class="text-center title mb-3">About Me</h3>
             </div>
             <div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
-              <p>I am a creative and motivated Web Developer with experience in creating Web Applications.
-                Strong Collaboration Skills and Proven history of Application Development.
+              <p>
+                <b>
+                  I am a creative and motivated Web Developer with experience in creating Web Applications.
+                  Strong Collaboration Skills and Proven history of Application Development.
+                </b> 
               </p>
             </div>
           </div>
@@ -80,7 +84,7 @@ function Home() {
             </div>
           </div>
           <div class="about-history my-lg-5 my-md-4 my-3">
-            <h2 class="pb-lg-4 pb-3">Some Facts About Me</h2>
+            <h2 class="pb-lg-4 pb-3">Education</h2>
             <p>sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, eiusmod tempor incididunt
               ut labore et consectetur adipiscing sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet Lorem ipsum
               dolor sit amet, eiusmod tempor incididunt ut labore et consectetur adipiscing</p>
@@ -119,17 +123,23 @@ function Home() {
         <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
           <div class="position-title position-relative">
             <h6 class="text-center top-title mb-2">My Skills</h6>
-            <div class="sub-position">
+            {/* <div class="sub-position">
               <h3 class="text-center title mb-3">My Achievement & Award</h3>
-            </div>
+            </div> */}
             <div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
-                ipsum </p>
+              {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
+                ipsum </p> */}
+                <SkillSets />
             </div>
+            <hr/>
+            <br/>
           </div>
-          <div class="row">
+          <h3 style={{textAlign:"center", fontWeight:"bold"}}>Projects Highlight</h3>
+          <br/>
+
+          <div class="row" id="gallery">
             <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
-              <h4>Experience</h4>
+              <h4>AJ Developers Data Collection App</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
                   ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -137,7 +147,26 @@ function Home() {
               </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
-              <h4>Runway Model</h4>
+              <h4>CodeLab Fund Raising App</h4>
+              <div class="skills-grids-w3layouts mt-lg-4 mt-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
+                  ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et Lorem ipsum </p>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
+              <h4>AJ Report Center</h4>
+              <div class="skills-grids-w3layouts mt-lg-4 mt-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
+                  ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et Lorem ipsum </p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
+              <h4>Web Platform for An NGO (UTAC)</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
                   ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -147,7 +176,7 @@ function Home() {
           </div>
           <div class="row my-lg-4 my-3">
             <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
-              <h4>Inter National Model</h4>
+              <h4>Web Platform for Lots Foundation</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
                   ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -155,7 +184,7 @@ function Home() {
               </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
-              <h4>Brand Model</h4>
+              <h4>Rental Application</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
                   ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -163,9 +192,10 @@ function Home() {
               </div>
             </div>
           </div>
+
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
-              <h4>Fresh Face</h4>
+              <h4>CodeLab Fund Raising App</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
                   ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -173,7 +203,7 @@ function Home() {
               </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
-              <h4>Fashion Model</h4>
+              <h4>School Management App</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
                   ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -208,8 +238,7 @@ function Home() {
               <h3 class="text-center title mb-3">Check Out My Projects</h3>
             </div>
             <div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
-                ipsum </p>
+              <p>You can click on the Card to view some of the hosted Projects</p>
             </div>
           </div>
           <div class="row gallery-info">
@@ -367,7 +396,7 @@ function Home() {
               {/* <h3 class="text-center title mb-3"></h3> */}
             </div>
             <div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
-              <p>You can send a message for consultations and any job (remote and full time) available</p>
+              <p>Send a message for consultations, training and teamup for any Project <br/>(remote and full time)</p>
             </div>
           </div>
           <div class=" contact-form-txt">
@@ -409,39 +438,39 @@ function Home() {
               <div class=" footer-top">
                 <h4 class="mb-lg-4 mb-3">Contact Me</h4>
                 <p>
-                  <span>Address</span> :Lagos, 102241
-                  <br/>Nigeria.</p>
+                  <span>Address</span> :Lagos, 102241, Nigeria.
+                  
+                </p>
                 <p class="pt-2">
                   <span> Phone</span> :+234 8137253138</p>
                 <p class="pt-2">
-                  <span>Email</span> :
-                  <a href="/">ujunwasamuelk@yahoo.com</a>
+                  <span>Email</span> :ujunwasamuelk@yahoo.com
                 </p>
               </div>
               <div class="social-icons mt-lg-3 mt-2">
                 <ul>
                   <li>
-                    <a href="#">
+                    <a href="https://web.facebook.com/skelechi3" target="blank">
                       <span class="fa fa-facebook mr-lg-3 mr-2"></span>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://github.com/SamuelKelechi" target="blank">
+                      <span class="fa fa-github mr-lg-3 mr-2"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/Samuel_Kelechi1" target="blank">
                       <span class="fa fa-twitter mr-lg-3 mr-2"></span>
                     </a>
                   </li>
-                  {/* <li>
-                    <a href="#">
-                      <span class="fa fa-rss mr-lg-3 mr-2"></span>
+                  <li>
+                    <a href="https://www.linkedin.com/in/samuel-kelechi-932984210">
+                      <span class="fa fa-linkedin mr-lg-3 mr-2"></span>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
-                      <span class="fa fa-envelope mr-lg-3 mr-2"></span>
-                    </a>
-                  </li> */}
-                  <li>
-                    <a href="#">
+                    <a href="https://www.instagram.com/samuelkelechi1/">
                       <span class="fa fa-instagram mr-lg-3 mr-2"></span>
                     </a>
                   </li>
@@ -472,9 +501,6 @@ function Home() {
       </footer>
     </div>
   </div>
-
-
-   
     );
   }
   
