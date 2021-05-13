@@ -19,26 +19,28 @@ const useStyles = makeStyles({
 
 
 
-const ProjectCards = () => {
+const ProjectCards = ({Project_Title, Description, Avatar, Link }) => {
     const classes = useStyles();
 
   return (
      <Card className={classes.root} style={{margin:"10px"}}>
+       <a href={Link} target="blank" style={{textDecoration:"none", border:"none"}}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
+          image={Avatar}
+          // title="Contemplative Reptile"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-           Project Title
+           {Project_Title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Project Description
+            {Description}
           </Typography>
         </CardContent>
       </CardActionArea>
+      </a>
       <CardActions>
         {/* <Button size="small" color="primary">
           Share

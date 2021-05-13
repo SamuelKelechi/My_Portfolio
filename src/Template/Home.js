@@ -1,8 +1,13 @@
 import React, {useState} from 'react'
 // import {useHistory} from "react-router-dom"
-import Modal from "./Modal"
+// import Modal from "./Modal"
 import ProjectCards from './ProjectCards'
 import SkillSets from './SkillSets'
+import DataCollection from './Images/Data-Collection.jpg'
+import FundRaising from './Images/Fund Raising.jpg'
+import LotsCharity from './Images/Lots Charity.jpg'
+import Secure from './Images/Security-App.jpg'
+import Umbrela from './Images/Umbrella.jpg'
 
 import {app} from "../Base"
 
@@ -86,7 +91,8 @@ function Home() {
           <h5 style={{fontSize:"25px"}}>Web Developer</h5>
         </div>
         <div class="view-buttn mt-md-4 mt-sm-4 mt-3">
-          <a href="#contact" class="btn">Contact Me</a>
+          <a href="#contact" class="btn" style={{margin:"5px"}}>Want to Hire?</a>
+          <a href="#contact" class="btn" style={{margin:"5px"}}>Need an App?</a>
         </div>
       </div>
    
@@ -308,11 +314,36 @@ function Home() {
             </div>
           </div>
         <div style={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
-          <ProjectCards/>
-          <ProjectCards/>
-          <ProjectCards />
-          <ProjectCards />
-          <ProjectCards />
+          <ProjectCards
+          Project_Title="Developers Data Collection App"
+          Description="A Data Collection Application build to gather data of developers living in Ajegunle, which will be vital in decision making."
+          Avatar={DataCollection}
+          Link="https://ajegunle-developers.web.app" 
+          />
+          <ProjectCards
+          Project_Title="CodeLab Fund Raising App"
+          Description="CodeLab Fund Raising App was developed for fund raising purpose to help sponsor young people living in Ajegunle that wish to start up a career in tech."
+          Avatar={FundRaising}
+          Link="https://codelab-support.web.app"  
+          />
+          <ProjectCards 
+          Project_Title="AJ Report Center"
+          Description="A web application developed during an Hackathon to help curb security challenges facing the Ajegunle community."
+          Avatar={Secure}
+          Link="https://security-dev-project.web.app"  
+          />
+          <ProjectCards 
+          Project_Title="Umbrella for the African Child(UTAC) Web Platform"
+          Description="A Web platform for an NGO (Umbrella for the African Child (UTAC)). An Organization that is based in Ghana and Nigeria."
+          Avatar={Umbrela}
+          Link="https://utacngo.web.app/"
+          />
+          <ProjectCards 
+          Project_Title="Web Platform for Lots Foundation"
+          Description="This is a web platform developed for an Organization (Lots Charity Foundation), an NGO that caters for Homeless Kids and Motherless Babies."
+          Avatar={LotsCharity}
+          Link="https://lotsngo.web.app/" 
+          />
         </div>
 
           {/* <div class="row gallery-info">
