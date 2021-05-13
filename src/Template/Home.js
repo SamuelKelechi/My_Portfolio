@@ -1,10 +1,44 @@
-import React from 'react'
+import React, {useState} from 'react'
+// import {useHistory} from "react-router-dom"
+import Modal from "./Modal"
+import ProjectCards from './ProjectCards'
 import SkillSets from './SkillSets'
 
-function Home() {
-    return (
-   
+import {app} from "../Base"
 
+const db = app.firestore();
+
+function Home() {
+  // const hist = useHistory();
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+
+  const PostMessage = async () => {
+    await db
+    .collection("porfoliomessage")
+    .doc()
+    .set({
+      firstName,
+      lastName,
+      email,
+      phone,
+      message
+    });
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+  };
+
+
+
+  return (
   <div class="banner-two-img" id="home">
     <div class=" banner-left-side">
       <div class="logo" style={{display:"flex", height:"60px", width:"60px",borderRadius:"30px", backgroundColor:"black", justifyContent:"center",alignItems:"center", color:"white", marginTop:"8px", marginLeft:"5px", border:"1px solid whitesmoke" }}>
@@ -141,17 +175,25 @@ function Home() {
             <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
               <h4>AJ Developers Data Collection App</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
-                  ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et Lorem ipsum </p>
+                <p>
+                AJ Developers Data Collection App was build in order to gather data's of developers living in Ajegunle, as
+                it is very important in decision making.
+                <br />
+                <br />
+                Worked with the Front End Developers team.
+                </p>
               </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
               <h4>CodeLab Fund Raising App</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
-                  ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et Lorem ipsum </p>
+                <p>
+                As means of giving young people the opportunity to become software developers at no cost, CodeLab Fund Raising App was
+                developed for fund raising purpose to help sponsor young people living in Ajegunle that wish to start up a career in tech.
+                <br/>
+                <br/>
+                Played role in brainstorming and implementation of the Application
+                </p>
               </div>
             </div>
           </div>
@@ -160,17 +202,26 @@ function Home() {
             <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
               <h4>AJ Report Center</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
-                  ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et Lorem ipsum </p>
+                <p>
+                 Led a team of Developers that build a web application to help curb security challenges facing our community in the
+                 first ever Ajegunle Hackathon, which we won in March 2021.
+                  <br/>
+                  <br/>
+                Played part in the Front End Development
+                </p>
               </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
               <h4>Web Platform for An NGO (UTAC)</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
-                  ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et Lorem ipsum </p>
+                <p>
+                  Was the team lead that developed a Web platform for an NGO (Umbrella for the African Child (UTAC)). An Organization
+                  that is based in Ghana and Nigeria.
+                  <br/>
+                  <br/>
+                  Serve as DevOps, from development and test to 
+                  Deployment and Operations.
+                </p>
               </div>
             </div>
           </div>
@@ -178,39 +229,54 @@ function Home() {
             <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
               <h4>Web Platform for Lots Foundation</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
-                  ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et Lorem ipsum </p>
+                <p>
+                  Was team lead for the development of an Organization (Lots Charity Foundation) Web Platform, an NGO 
+                  that caters for Homeless Kids and Motherless Babies
+                  <br/>
+                  <br/>
+                  Serve as DevOps, from development and test to 
+                  Deployment and Operations.
+                </p>
               </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
               <h4>Rental Application</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
-                  ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et Lorem ipsum </p>
+                <p>
+                  Worked on the Front End with a team to build a web rental platform where estate agents can upload available
+                  houses for rental and purchase means, and users can contact them through the platform.
+                  <br/>
+                  <br/>
+                 I see to the market testing of the platform to ascertain users satisfaction before it is launched to the market.
+                </p>
               </div>
             </div>
           </div>
 
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
+              <h4>School Management App</h4>
+              <div class="skills-grids-w3layouts mt-lg-4 mt-3">
+                <p>
+                  Was involved in the development of a school Management application for Primary and Secondary Schools 
+                  that will help to monitor student learning progress in Coding and Robotics training.
+                  <br/>
+                  <br/>
+                  The platform also contains learning materials.
+                </p>
+              </div>
+            </div>
+                {/* <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
               <h4>CodeLab Fund Raising App</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
                   ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                   et Lorem ipsum </p>
               </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
-              <h4>School Management App</h4>
-              <div class="skills-grids-w3layouts mt-lg-4 mt-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
-                  ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et Lorem ipsum </p>
-              </div>
-            </div>
+            </div> */}
           </div>
+
+
         </div>
       </section>
 {/*    
@@ -231,7 +297,7 @@ function Home() {
       </section> */}
 
       <section class="gallery pt-lg-4 pt-md-3 pt-sm-3 pt-3" id="gallery">
-        <div class="container pt-lg-5 pt-md-4 pt-sm-4 pt-3">
+        <div class="container pt-lg-5 pt-md-4 pt-sm-4 pt-3" >
           <div class="position-title position-relative">
             <h6 class="text-center top-title mb-2">PROJECTS DONE</h6>
             <div class="sub-position">
@@ -241,7 +307,15 @@ function Home() {
               <p>You can click on the Card to view some of the hosted Projects</p>
             </div>
           </div>
-          <div class="row gallery-info">
+        <div style={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
+          <ProjectCards/>
+          <ProjectCards/>
+          <ProjectCards />
+          <ProjectCards />
+          <ProjectCards />
+        </div>
+
+          {/* <div class="row gallery-info">
             <div class="col-lg-4 col-md-4 col-sm-4 gallery-img-grid p-0">
               <div class="gallery-grids">
                 <a href="#gal1">
@@ -325,7 +399,7 @@ function Home() {
               <a class="close" href="#gallery">&times;</a>
             </div>
           </div>
-        
+         */}
         </div>
       </section>
    
@@ -400,28 +474,87 @@ function Home() {
             </div>
           </div>
           <div class=" contact-form-txt">
-            <form action="#" method="post">
+            <form>
               <div class="w3pvt-wls-contact-mid">
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-sm-6 form-group contact-forms">
-                    <input type="text" class="form-control" placeholder="First Name" required="" />
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    placeholder="First Name" 
+                    value={firstName} 
+                    required="true" 
+                    onChange={(e) => {
+                      setFirstName(e.target.value);
+                    }}
+                  />
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6 form-group contact-forms">
-                    <input type="text" class="form-control" placeholder="Last Name" required="" />
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    placeholder="Last Name" 
+                    value={lastName} 
+                    // required="true"
+                    onChange={(e) => {
+                      setLastName(e.target.value);
+                    }} 
+                    />
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-sm-6 form-group contact-forms">
-                    <input type="email" class="form-control" placeholder="Email" required="" />
+                    <input 
+                    type="email" 
+                    class="form-control" 
+                    placeholder="Email" 
+                    value={email} 
+                    required="true"
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }} 
+                    />
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-6 form-group contact-forms">
-                    <input type="text" class="form-control" placeholder="Phone" required="" />
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    placeholder="Phone" 
+                    value={phone} 
+                    required="true"
+                    onChange={(e) => {
+                      setPhone(e.target.value);
+                    }}
+                    />
                   </div>
                 </div>
                 <div class="form-group contact-forms">
-                  <textarea class="form-control" placeholder="Message" rows="3" required=""></textarea>
+                  <textarea 
+                  class="form-control" 
+                  placeholder="Message" 
+                  value={message} 
+                  rows="3" 
+                  required="true"
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                  }}
+                  >
+
+                  </textarea>
                 </div>
-                <button type="submit" class="btn sent-butnn">Send</button>
+                <a href="#" class="move-top text-center mt-3">
+                <button 
+                class="btn sent-butnn"
+                onClick={() => {
+                  PostMessage();
+                  // alert("Message Sent Successfully")
+                }}
+                style={{
+                  display:"flex"
+                }}
+                >Send</button>
+                </a>
+
               </div>
             </form>
           </div>
@@ -432,7 +565,7 @@ function Home() {
         <div class="container py-2">
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 address_mail_footer_grids ">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3539.812628729253!2d153.014155!3d-27.4750921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a0835840a2f%3A0xdd5e3f5c208dc0e1!2sMelbourne+St%2C+South+Brisbane+QLD+4101%2C+Australia!5e0!3m2!1sen!2sin!4v1492257477691"></iframe>
+            <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Ajeromi%20ifelodun&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 contact-w3pvt-address">
               <div class=" footer-top">
@@ -465,12 +598,12 @@ function Home() {
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/in/samuel-kelechi-932984210">
+                    <a href="https://www.linkedin.com/in/samuel-kelechi-932984210" target="blank">
                       <span class="fa fa-linkedin mr-lg-3 mr-2"></span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/samuelkelechi1/">
+                    <a href="https://www.instagram.com/samuelkelechi1/" target="blank">
                       <span class="fa fa-instagram mr-lg-3 mr-2"></span>
                     </a>
                   </li>
