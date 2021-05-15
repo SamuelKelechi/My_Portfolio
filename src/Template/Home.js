@@ -106,7 +106,7 @@ function Home() {
             <div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
               <p>
                 <b>
-                  I am a creative and motivated Web Developer with experience in creating Web Applications.
+                  I am a creative and motivated Web Developer with experience in creating Interactive Web Applications.
                   Strong Collaboration Skills and Proven history of Application Development.
                 </b> 
               </p>
@@ -125,12 +125,13 @@ function Home() {
           </div>
           <div class="about-history my-lg-5 my-md-4 my-3">
             <h2 class="pb-lg-4 pb-3">Education</h2>
-            <p>sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, eiusmod tempor incididunt
-              ut labore et consectetur adipiscing sed do eiusmod tempor incididunt ut Lorem ipsum dolor sit amet Lorem ipsum
-              dolor sit amet, eiusmod tempor incididunt ut labore et consectetur adipiscing</p>
+            <h6><b>Web Development (Full Stack)</b></h6>Codelab, Lagos, Nigeria. <br/>2020-2021
+            <br/>
+            <br/>
+            <h6><b>B.Sc Computer Science</b></h6>ESCAE University, Benin Rep. <br/>2014-2018
           </div>
+          <br/>
           <div class="row text-center" style={{display:"flex", justifyContent:"center"}}>
-
             <div class="col-lg-3 col-md-3 col-sm-3 col-6 count-num-txt">
               <div class="number-w3three-info">
                 <h5>1+</h5>
@@ -614,13 +615,19 @@ function Home() {
               <div class="social-icons mt-lg-3 mt-2">
                 <ul>
                   <li>
-                    <a href="https://web.facebook.com/skelechi3" target="blank">
-                      <span class="fa fa-facebook mr-lg-3 mr-2"></span>
+                    <a href="https://github.com/SamuelKelechi" target="blank">
+                      <span class="fa fa-github mr-lg-3 mr-2"></span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="https://www.linkedin.com/in/samuel-kelechi-932984210" target="blank">
+                      <span class="fa fa-linkedin mr-lg-3 mr-2"></span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://github.com/SamuelKelechi" target="blank">
-                      <span class="fa fa-github mr-lg-3 mr-2"></span>
+                    <a href="https://web.facebook.com/skelechi3" target="blank">
+                      <span class="fa fa-facebook mr-lg-3 mr-2"></span>
                     </a>
                   </li>
                   <li>
@@ -628,16 +635,11 @@ function Home() {
                       <span class="fa fa-twitter mr-lg-3 mr-2"></span>
                     </a>
                   </li>
-                  <li>
-                    <a href="https://www.linkedin.com/in/samuel-kelechi-932984210" target="blank">
-                      <span class="fa fa-linkedin mr-lg-3 mr-2"></span>
-                    </a>
-                  </li>
-                  <li>
+                  {/* <li>
                     <a href="https://www.instagram.com/samuelkelechi1/" target="blank">
                       <span class="fa fa-instagram mr-lg-3 mr-2"></span>
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
