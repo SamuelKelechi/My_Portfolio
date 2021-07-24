@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
+
+import styled from 'styled-components'
 // import {useHistory} from "react-router-dom"
-// import Modal from "./Modal"
 import ProjectCards from './ProjectCards'
 import SkillSets from './SkillSets'
 import DataCollection from './Images/Data-Collection.jpg'
@@ -14,6 +15,8 @@ import {app} from "../Base"
 const db = app.firestore();
 
 function Home() {
+
+
   // const hist = useHistory();
 
   const [firstName, setFirstName] = useState("");
@@ -86,19 +89,22 @@ function Home() {
   
       <div class="banner-right-txt text-center">
         <h5 class="mb-2">Hi, There</h5>
-        <h4>I'M Samuel Kelechi</h4>
+        <h4><NameContainer>I'M Samuel Kelechi</NameContainer></h4>
         <div class="two-demo-button mt-3">
           <h5 style={{fontSize:"25px"}}>Web Developer</h5>
         </div>
-        <div class="view-buttn mt-md-4 mt-sm-4 mt-3">
-          <a href="#contact" class="btn" style={{margin:"5px"}}>Want to Hire?</a>
-          <a href="#contact" class="btn" style={{margin:"5px"}}>Need an App?</a>
+        <div class="view-buttn mt-md-4 mt-sm-4 mt-3">   
+          <a href="#contact" class="btn" style={{margin:"5px", borderRadius:"4px"}}>Want to Hire?</a>
+          <a href="https://wa.me/2348137253138" target="_blank" rel="noopener noreferrer" class="btn" style={{margin:"5px", borderRadius:"4px"}}>Want to Chat?<i class="fa fa-whatsapp whatsapp-icon" style={{
+            color:"#FFF", backgroundColor:"#25d366", borderRadius:"50px", fontSize: "15px", boxShadow: "2px 2px 3px #999", margin:"2px"
+          }}></i></a>
         </div>
       </div>
    
+   
       <section class="about py-lg-4 py-md-3 py-sm-3 py-3" id="about">
         <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
-          <div class="position-title position-relative">
+          <div class="position-title position-relative" style={{backgroundImage:{FundRaising}}}>
             <h6 class="text-center top-title mb-2">My History</h6>
             <div class="sub-position">
               <h3 class="text-center title mb-3">About Me</h3>
@@ -502,7 +508,7 @@ function Home() {
               {/* <h3 class="text-center title mb-3"></h3> */}
             </div>
             <div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
-              <p>Send a message for consultations, training and teamup for any Project <br/>(remote and full time)</p>
+              <p>Send a message for consultations, training and teamup for any Project <br/>(Remote and Onsite)</p>
             </div>
           </div>
           <div class=" contact-form-txt">
@@ -635,11 +641,11 @@ function Home() {
                       <span class="fa fa-twitter mr-lg-3 mr-2"></span>
                     </a>
                   </li>
-                  {/* <li>
-                    <a href="https://www.instagram.com/samuelkelechi1/" target="blank">
-                      <span class="fa fa-instagram mr-lg-3 mr-2"></span>
-                    </a>
-                  </li> */}
+                  <li>
+                  <a href="https://wa.me/2348137253138" target="_blank" rel="noopener noreferrer">
+                  <span class="fa fa-whatsapp whatsapp-icon" ></span>
+                  </a> 
+                  </li>
                 </ul>
               </div>
             </div>
@@ -660,7 +666,7 @@ function Home() {
           <div class="bottem-txt-footer text-center pt-md-4 pt-3">
             <p>
               ©2021 SamTech. All Rights Reserved | Design by
-              <a href="#" target="_blank"> Team CodeLab</a>
+              <a href="#" target="_blank"> Team Soft Inc.</a>
             </p>
           </div>
         </div>
@@ -671,3 +677,25 @@ function Home() {
   }
   
   export default Home;
+
+const NameContainer = styled.div`
+  overflow: hidden;       /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid C3008B;       /* The typwriter cursor */
+  white-space: nowrap;      /* Keeps the content on a single line */
+  margin: 0 auto;       /* Gives that scrolling effect as the typing happens */
+  // letter-spacing: .15em;    /* Adjust as needed */
+  animation: 
+  typing 5.5s steps(40, end),
+  blink-caret .75s step-end infinite;
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+    }
+  }
+}
+`

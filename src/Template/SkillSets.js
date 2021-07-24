@@ -1,4 +1,6 @@
 import React from "react";
+import "./SkillSets.css"
+
 import ReactLogo from "../videos/React.png"
 import JavascriptLogo from "../videos/Javascript.png"
 import NodejsLogo from "../videos/Nodejs.png"
@@ -18,15 +20,7 @@ import PWALogo from "../videos/PWA.png"
 
 const SkillSets = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        width: "100%",
-        marginTop: "20px"
-      }}
-    >
+    <div className="SkillSets_Container">
 
       <div>
         <img
