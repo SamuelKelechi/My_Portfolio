@@ -1,9 +1,4 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
+
 html,
 body {
 padding: 0;
@@ -209,7 +204,7 @@ ul.submenu li a.active {
 }
 .banner-right-side {
     margin-left: 532px;
-    /* background: url(../images/b1.png); */
+    
 }
 .two-demo-button p {
     color: #000;
