@@ -1,7 +1,5 @@
 import React, {useState} from 'react'
-
 import styled from 'styled-components'
-// import {useHistory} from "react-router-dom"
 import ProjectCards from './ProjectCards'
 import SkillSets from './SkillSets'
 import DataCollection from './Images/Data-Collection.jpg'
@@ -9,15 +7,13 @@ import FundRaising from './Images/Fund Raising.jpg'
 import LotsCharity from './Images/Lots Charity.jpg'
 import Secure from './Images/Security-App.jpg'
 import Umbrela from './Images/Umbrella.jpg'
+import Back from './Images/back.jpg'
 
 import {app} from "../Base"
 
 const db = app.firestore();
 
 function Home() {
-
-
-  // const hist = useHistory();
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -28,7 +24,7 @@ function Home() {
 
   const PostMessage = async () => {
     await db
-    .collection("porfoliomessage")
+    .collection("portfoliomessage")
     .doc()
     .set({
       firstName,
@@ -71,9 +67,6 @@ function Home() {
             <li>
               <a href="#skills">My Skills</a>
             </li>
-            {/* <li>
-              <a href="#blog">Blog</a>
-            </li> */}
             <li>
               <a href="#gallery">Projects</a>
             </li>
@@ -87,15 +80,20 @@ function Home() {
     </div>
     <div class="banner-right-side">
   
-      <div class="banner-right-txt text-center">
-        <h5 class="mb-2">Hi, There</h5>
+      <div class="banner-right-txt text-center" style={{
+        backgroundImage: `url(${Back})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition:"center",
+        backgroundSize:"cover"
+      }}>
+        <h5 class="mb-2" style={{fontSize:"20px", fontWeight:"bolder"}}>Hi, There</h5>
         <h4><NameContainer>I'M Samuel Kelechi</NameContainer></h4>
         <div class="two-demo-button mt-3">
-          <h5 style={{fontSize:"25px"}}>Web Developer</h5>
+          <h5 style={{fontSize:"25px", fontWeight:"bolder"}}>Web Developer</h5>
         </div>
         <div class="view-buttn mt-md-4 mt-sm-4 mt-3">   
-          <a href="#contact" class="btn" style={{margin:"5px", borderRadius:"4px"}}>Want to Hire?</a>
-          <a href="https://wa.me/2348137253138" target="_blank" rel="noopener noreferrer" class="btn" style={{margin:"5px", borderRadius:"4px"}}>Want to Chat?<i class="fa fa-whatsapp whatsapp-icon" style={{
+          <a href="#contact" class="btn" style={{margin:"5px", borderRadius:"4px", backgroundColor:"white"}}>Want to Hire?</a>
+          <a href="https://wa.me/2348137253138" target="_blank" message="Hi, Just viewed your Portfolio" rel="noopener noreferrer" class="btn" style={{margin:"5px", borderRadius:"4px", backgroundColor:"white"}}>Want to Chat?<i class="fa fa-whatsapp whatsapp-icon" style={{
             color:"#FFF", backgroundColor:"#25d366", borderRadius:"50px", fontSize: "15px", boxShadow: "2px 2px 3px #999", margin:"2px"
           }}></i></a>
         </div>
@@ -104,7 +102,7 @@ function Home() {
    
       <section class="about py-lg-4 py-md-3 py-sm-3 py-3" id="about">
         <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
-          <div class="position-title position-relative" style={{backgroundImage:{FundRaising}}}>
+          <div class="position-title position-relative">
             <h6 class="text-center top-title mb-2">My History</h6>
             <div class="sub-position">
               <h3 class="text-center title mb-3">About Me</h3>
@@ -150,18 +148,6 @@ function Home() {
                 <h6 class="pt-2">Projects</h6>
               </div>
             </div>
-            {/* <div class="col-lg-3 col-md-3 col-sm-3 col-6 count-num-txt">
-              <div class="number-w3three-info">
-                <h5>150</h5>
-                <h6 class="pt-2">Awards</h6>
-              </div>
-            </div> */}
-            {/* <div class="col-lg-3 col-md-3 col-sm-3 col-6 count-num-txt">
-              <div class="number-w3three-info">
-                <h5>125</h5>
-                <h6 class="pt-2">Tea</h6>
-              </div>
-            </div> */}
           </div>
         </div>
       </section>
@@ -170,12 +156,7 @@ function Home() {
         <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
           <div class="position-title position-relative">
             <h6 class="text-center top-title mb-2">My Skills</h6>
-            {/* <div class="sub-position">
-              <h3 class="text-center title mb-3">My Achievement & Award</h3>
-            </div> */}
             <div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
-              {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
-                ipsum </p> */}
                 <SkillSets />
             </div>
             <hr/>
@@ -185,7 +166,7 @@ function Home() {
           <br/>
 
           <div class="row" id="gallery">
-            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
+            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards" style={{borderBottom: "4px solid whitesmoke"}}>
               <h4>AJ Developers Data Collection App</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
                 <p>
@@ -197,7 +178,7 @@ function Home() {
                 </p>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
+            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards" style={{borderBottom: "4px solid whitesmoke"}}>
               <h4>CodeLab Fund Raising App</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
                 <p>
@@ -212,7 +193,7 @@ function Home() {
           </div>
           <br/>
           <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
+            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards" style={{borderBottom: "4px solid whitesmoke"}}>
               <h4>AJ Report Center</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
                 <p>
@@ -220,11 +201,11 @@ function Home() {
                  first ever Ajegunle Hackathon, which we won in March 2021.
                   <br/>
                   <br/>
-                Played part in the Front End Development
+                  Played part in the Front End Development
                 </p>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
+            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards" style={{borderBottom: "4px solid whitesmoke"}}>
               <h4>Web Platform for An NGO (UTAC)</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
                 <p>
@@ -239,7 +220,7 @@ function Home() {
             </div>
           </div>
           <div class="row my-lg-4 my-3">
-            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
+            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards" style={{borderBottom: "4px solid whitesmoke"}}>
               <h4>Web Platform for Lots Foundation</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
                 <p>
@@ -252,22 +233,8 @@ function Home() {
                 </p>
               </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
-              <h4>Rental Application</h4>
-              <div class="skills-grids-w3layouts mt-lg-4 mt-3">
-                <p>
-                  Worked on the Front End with a team to build a web rental platform where estate agents can upload available
-                  houses for rental and purchase means, and users can contact them through the platform.
-                  <br/>
-                  <br/>
-                 I see to the market testing of the platform to ascertain users satisfaction before it is launched to the market.
-                </p>
-              </div>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
+            <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards" style={{borderBottom: "4px solid whitesmoke"}}>
               <h4>School Management App</h4>
               <div class="skills-grids-w3layouts mt-lg-4 mt-3">
                 <p>
@@ -279,36 +246,16 @@ function Home() {
                 </p>
               </div>
             </div>
-                {/* <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards">
-              <h4>CodeLab Fund Raising App</h4>
-              <div class="skills-grids-w3layouts mt-lg-4 mt-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
-                  ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et Lorem ipsum </p>
-              </div>
-            </div> */}
+          </div>
+
+          <div class="row">
+            
           </div>
 
 
         </div>
       </section>
-{/*    
-      <section class="newsletter py-lg-4 py-md-3 py-sm-3 py-3" id="newsletter">
-        <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
-          <div class="get-update-wthree">
-            <h5 class="mb-2">Get Updates...!</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
-              ipsum </p>
-            <form action="#" method="post">
-              <div class="mt-lg-5 mt-md-4 mt-3 form-group contact-forms">
-                <input type="email" class="form-control" placeholder="Email" required="" />
-              </div>
-              <button type="submit" class="btn sent-butnn">Subscribe</button>
-            </form>
-          </div>
-        </div>
-      </section> */}
-
+      
       <section class="gallery pt-lg-4 pt-md-3 pt-sm-3 pt-3" id="gallery">
         <div class="container pt-lg-5 pt-md-4 pt-sm-4 pt-3" >
           <div class="position-title position-relative">
@@ -339,173 +286,29 @@ function Home() {
           Avatar={Secure}
           Link="https://security-dev-project.web.app"  
           />
+              <ProjectCards 
+          Project_Title="Web Platform for Lots Foundation"
+          Description="This is a web platform developed for an Organization (Lots Charity Foundation), an NGO that caters for Homeless Kids and Motherless Babies."
+          Avatar={LotsCharity}
+          Link="https://lotsngo.web.app/" 
+          />
           <ProjectCards 
           Project_Title="Umbrella for the African Child(UTAC) Web Platform"
           Description="A Web platform for an NGO (Umbrella for the African Child (UTAC)). An Organization that is based in Ghana and Nigeria."
           Avatar={Umbrela}
           Link="https://utacngo.web.app/"
           />
-          <ProjectCards 
-          Project_Title="Web Platform for Lots Foundation"
-          Description="This is a web platform developed for an Organization (Lots Charity Foundation), an NGO that caters for Homeless Kids and Motherless Babies."
-          Avatar={LotsCharity}
-          Link="https://lotsngo.web.app/" 
-          />
         </div>
 
-          {/* <div class="row gallery-info">
-            <div class="col-lg-4 col-md-4 col-sm-4 gallery-img-grid p-0">
-              <div class="gallery-grids">
-                <a href="#gal1">
-                  <img src="web/images/g1.jpg" alt="news image" class="img-fluid" />
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 gallery-img-grid p-0">
-              <div class="gallery-grids">
-                <a href="#gal2">
-                  <img src="web/images/g2.jpg" alt="news image" class="img-fluid" />
-                </a>
-              </div>
-              <div class="gallery-grids">
-                <a href="#gal3">
-                  <img src="web/images/g3.jpg" alt="news image" class="img-fluid" />
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 gallery-img-grid p-0">
-              <div class="gallery-grids">
-                <a href="#gal4">
-                  <img src="web/images/g4.jpg" alt="news image" class="img-fluid" />
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 gallery-img-grid p-0">
-              <div class="gallery-grids">
-                <a href="#gal5">
-                  <img src="web/images/g6.jpg" alt="news image" class="img-fluid" />
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 gallery-img-grid p-0">
-              <div class="gallery-grids">
-                <a href="#gal6">
-                  <img src="web/images/g5.jpg" alt="news image" class="img-fluid" />
-                </a>
-              </div>
-            </div>
-          </div>
 
-          <div id="gal1" class="popup-effect">
-            <div class="popup">
-              <img src="web/images/g1.jpg" alt="Popup Image" class="img-fluid" />
-              <a class="close" href="#gallery">&times;</a>
-            </div>
-          </div>
-      
-          <div id="gal2" class="popup-effect">
-            <div class="popup">
-              <img src="web/images/g2.jpg" alt="Popup Image" class="img-fluid" />
-              <a class="close" href="#gallery">&times;</a>
-            </div>
-          </div>
-        
-          <div id="gal3" class="popup-effect">
-            <div class="popup">
-              <img src="web/images/g3.jpg" alt="Popup Image" class="img-fluid" />
-              <a class="close" href="#gallery">&times;</a>
-            </div>
-          </div>
-     
-          <div id="gal4" class="popup-effect">
-            <div class="popup">
-              <img src="web/images/g4.jpg" alt="Popup Image" class="img-fluid" />
-              <a class="close" href="#gallery">&times;</a>
-            </div>
-          </div>
-         
-          <div id="gal5" class="popup-effect">
-            <div class="popup">
-              <img src="web/images/g6.jpg" alt="Popup Image" class="img-fluid" />
-              <a class="close" href="#gallery">&times;</a>
-            </div>
-          </div>
-         
-          <div id="gal6" class="popup-effect">
-            <div class="popup">
-              <img src="web/images/g5.jpg" alt="Popup Image" class="img-fluid" />
-              <a class="close" href="#gallery">&times;</a>
-            </div>
-          </div>
-         */}
         </div>
       </section>
-   
-      {/* <section class="blog py-lg-4 py-md-3 py-sm-3 py-3" id="blog">
-        <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
-          <div class="position-title position-relative">
-            <h6 class="text-center top-title mb-2">My Blog</h6>
-            <div class="sub-position">
-              <h3 class="text-center title mb-3">Latest Post Blog & News</h3>
-            </div>
-            <div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem
-                ipsum </p>
-            </div>
-          </div>
-          <div class="row mt-lg-4 mt-3">
-            <div class="col-lg-6 col-md-6 col-sm-6 blog-two-two">
-              <div class="blog-date-time mb-2">
-                <ul>
-                  <li>
-                    <a href="#contact">July 2020/7</a>
-                  </li>
-                  <li>
-                    <a href="#contact">Comments 5</a>
-                  </li>
-                </ul>
-              </div>
-              <h4 class="mb-3">
-                <a href="#contact">Lorem ipsum dolor</a>
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vestibulum nibh urna Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit.Vestibulum nibh urna</p>
-              <div class="view-buttn my-md-4 my-sm-4 my-3">
-                <a href="#contact" class="btn">Book Me</a>
-              </div>
-              <img src="web/images/blog2.jpg" alt="news image" class="img-fluid" />
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 blog-two-two mt-3">
-              <img src="web/images/blog1.jpg" alt="news image" class="img-fluid" />
-              <div class="blog-date-time mt-lg-4 mt-3 mb-2">
-                <ul>
-                  <li>
-                    <a href="#contact">July 2020/7</a>
-                  </li>
-                  <li>
-                    <a href="#contact">Comments 5</a>
-                  </li>
-                </ul>
-              </div>
-              <h4 class="mb-3">
-                <a href="#contact">Lorem ipsum dolor</a>
-              </h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vestibulum nibh urna Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit.Vestibulum nibh urna</p>
-              <div class="view-buttn mt-md-4 mt-sm-4 mt-3">
-                <a href="#contact" class="btn">Book Me</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
     
       <section class="contact py-lg-4 py-md-3 py-sm-3 py-3" id="contact">
         <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
           <div class="position-title position-relative">
             <h6 class="text-center top-title mb-2">Contact Me</h6>
             <div class="sub-position">
-              {/* <h3 class="text-center title mb-3"></h3> */}
             </div>
             <div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
               <p>Send a message for consultations, training and teamup for any Project <br/>(Remote and Onsite)</p>
@@ -533,7 +336,6 @@ function Home() {
                     class="form-control" 
                     placeholder="Last Name" 
                     value={lastName} 
-                    // required="true"
                     onChange={(e) => {
                       setLastName(e.target.value);
                     }} 
@@ -651,6 +453,7 @@ function Home() {
             </div>
           </div>
       </div>
+
       <div>
           <div class="text-right">
             <a href="#" class="move-top text-center mt-3">
@@ -679,14 +482,13 @@ function Home() {
   export default Home;
 
 const NameContainer = styled.div`
+  background-color:white;
   overflow: hidden;       /* Ensures the content is not revealed until the animation */
   border-right: .15em solid C3008B;       /* The typwriter cursor */
   white-space: nowrap;      /* Keeps the content on a single line */
   margin: 0 auto;       /* Gives that scrolling effect as the typing happens */
   // letter-spacing: .15em;    /* Adjust as needed */
-  animation: 
-  typing 5.5s steps(40, end),
-  blink-caret .75s step-end infinite;
+  animation: typing 10s steps(40, end), blink-caret .75s step-end infinite;
 
   @keyframes typing {
     from { width: 0 }
@@ -699,3 +501,18 @@ const NameContainer = styled.div`
   }
 }
 `
+
+
+
+// <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards" style={{borderBottom: "4px solid whitesmoke"}}>
+// <h4>Rental Application</h4>
+// <div class="skills-grids-w3layouts mt-lg-4 mt-3">
+//   <p>
+//     Worked on the Front End with a team to build a web rental platform where estate agents can upload available
+//     houses for rental and purchase means, and users can contact them through the platform.
+//     <br/>
+//     <br/>
+//    I see to the market testing of the platform to ascertain users satisfaction before it is launched to the market.
+//   </p>
+// </div>
+// </div>
