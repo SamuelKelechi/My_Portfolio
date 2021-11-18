@@ -145,7 +145,7 @@ function Home() {
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-6 count-num-txt">
               <div class="number-w3three-info">
-                <h5>6+</h5>
+                <h5>8+</h5>
                 <h6 class="pt-2">Projects</h6>
               </div>
             </div>
