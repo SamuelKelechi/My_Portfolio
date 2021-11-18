@@ -25,7 +25,7 @@ function Home() {
 
   const PostMessage = async () => {
     await db
-    .collection("portfoliomessage")
+    .collection("porfoliomessage")
     .doc()
     .set({
       firstName,
