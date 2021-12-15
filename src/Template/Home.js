@@ -8,7 +8,7 @@ import LotsCharity from './Images/Lots Charity.jpg'
 import Secure from './Images/Security-App.jpg'
 import Umbrela from './Images/Umbrella.jpg'
 import School from './Images/School.png'
-import Back from './Images/back.jpg'
+import Work from './Work'
 
 import {app} from "../Base"
 
@@ -111,8 +111,8 @@ function Home() {
             <div class="title-wls-text text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">
               <p>
                 <b>
-                  I am a creative and motivated Web Developer with experience in creating Interactive Web Applications.
-                  Strong Collaboration Skills and Proven history of Application Development.
+                  I am a creative and motivated Web Developer with experience in creating Interactive Web Applications with a
+                  Strong Collaboration Skill and Proven history of Application Development.
                 </b> 
               </p>
             </div>
@@ -163,8 +163,13 @@ function Home() {
             <hr/>
             <br/>
           </div>
-          <h3 style={{textAlign:"center", fontWeight:"bold"}}>Projects Highlight</h3>
+          <div style={{width:"100%"}}>
+            <h4 style={{textAlign:"center", fontSize:"18px"}}>I’ve built and launched many successful products for my clients. I’ve learned what works and what doesn’t.</h4>
+            <Work />
+          </div>
           <br/>
+          <br/>
+          <h3 style={{textAlign:"center", fontWeight:"bold", marginBottom:"5px"}}>Projects Highlight</h3>
 
           <div class="row" id="gallery">
             <div class="col-lg-6 col-md-6 col-sm-6 my-grid-awards" style={{borderBottom: "4px solid whitesmoke"}}>
@@ -475,8 +480,8 @@ function Home() {
         <div class="container pb-lg-3 pb-2">
           <div class="bottem-txt-footer text-center pt-md-4 pt-3">
             <p>
-              ©2021 SamTech. All Rights Reserved | Design by
-              <a href="#" target="_blank"> Team Soft Inc.</a>
+              ©2021 All Rights Reserved | Design by
+              <a href="#" target="_blank" style={{color:"lightgrey"}}> Samuel Kelechi.</a>
             </p>
           </div>
         </div>
