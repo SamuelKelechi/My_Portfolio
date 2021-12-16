@@ -119,13 +119,13 @@ function Home() {
           </div>
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 about-wthree-images">
-              <img src="web/images/ab1.jpg" alt="news image1" class="img-fluid" />
+              <img src="web/images/First.png" alt="news image1" class="img-fluid" style={{height:"210px", width:"250px"}}/>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 about-wthree-images">
-              <img src="web/images/ab2.jpg" alt="news image2" class="img-fluid" />
+              <img src="web/images/Second.png" alt="news image2" class="img-fluid" style={{height:"230px", width:"250px"}}/>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 about-wthree-images">
-              <img src="web/images/ab3.jpg" alt="news image3" class="img-fluid" />
+              <img src="web/images/Third.png" alt="news image3" class="img-fluid" style={{height:"240px", width:"250px"}}/>
             </div>
           </div>
           <div class="about-history my-lg-5 my-md-4 my-3">
@@ -169,6 +169,8 @@ function Home() {
           </div>
           <br/>
           <br/>
+          <br/>
+
           <h3 style={{textAlign:"center", fontWeight:"bold", marginBottom:"5px"}}>Projects Highlight</h3>
 
           <div class="row" id="gallery">
@@ -261,7 +263,7 @@ function Home() {
         </div>
       </section>
       
-      <section class="gallery pt-lg-4 pt-md-3 pt-sm-3 pt-3" id="gallery">
+      <section class="gallery pt-lg-4 pt-md-3 pt-sm-3 pt-3" id="gallery" style={{marginTop:"-50px"}}>
         <div class="container pt-lg-5 pt-md-4 pt-sm-4 pt-3" >
           <div class="position-title position-relative">
             <h6 class="text-center top-title mb-2">PROJECTS DONE</h6>
